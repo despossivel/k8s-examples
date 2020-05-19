@@ -1,0 +1,16 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+	name: hello-nginx
+spec:
+	replicas: 3 #escalar pods
+	template:
+		metadata:
+			labels:
+				app: hello-nginx-pod
+		spec:
+			containers:
+			- name: nginx
+				image: nginx:1.17-alpine
+				ports:
+				- containerPort: 80
