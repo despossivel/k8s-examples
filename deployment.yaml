@@ -20,12 +20,12 @@ spec:
           readOnly: true
      
 
-      resources:
-       requests:
-        # memory: "100Mi"
-        cpu: "200m"
-       limits:
-        cpu: "250m"
+      # resources:
+      #  requests:
+      #   # memory: "100Mi"
+      #   cpu: "200m"
+      #  limits:
+      #   cpu: "250m"
 
    volumes:
     - name: nginx-conf
