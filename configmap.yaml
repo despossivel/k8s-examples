@@ -3,10 +3,4 @@ kind: ConfigMap
 metadata:
     name: nginx-conf
 data:
-    nginx.conf: |
-
-    server{
-        listen 80;
-        index index.php index.html;
-         rewrite ^/google$ http://google.com permanent;
-    }
+    nginx.conf: server{  listen 80; index index.php index.html; root /usr/shared/nginx/html;  rewrite ^/google$ http://google.com permanent; }
